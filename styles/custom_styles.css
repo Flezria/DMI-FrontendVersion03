@@ -1,0 +1,76 @@
+body {
+    background-color: #d9d9d9;
+}
+
+.custom-container {
+    background-color: white;
+    height: auto;
+}
+
+.panel-default > .panel-header-color {
+    background: #29378f;
+    color: white;
+}
+
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #29378f;
+    color: white;
+    text-align: center;
+}
+
+.custom-thead-color {
+    background-color: #29378f;
+    color: white;
+}
+
+/*
+ *
+ NAVIGATION CSS
+ *
+*/
+
+#custom-menu.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#custom-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(41, 55, 143, 1);
+    border-width: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+#custom-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(41, 55, 143, 1);
+}
+#custom-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(41, 55, 143, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom-menu.navbar-default .navbar-nav>.active>a,
+#custom-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(41, 55, 143, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom-menu.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+#custom-menu.navbar-default .navbar-toggle:hover,
+#custom-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+#custom-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+#custom-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #29378f;
+}

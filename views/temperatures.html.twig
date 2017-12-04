@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Temperature fra Raspberry Pi</h2>
+    <br />
+
+    <table class="table table-bordered table-striped">
+        <thead class="custom-thead-color">
+            <th>Temperatur</th>
+            <th>Tidspunkt</th>
+        </thead>
+        <tbody>
+            {% for temperature in temperatures %}
+                <tr>
+                    <td>{{ temperature.Temperature }}</td>
+                    <td>{{ temperature.CaptureTime }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}
+
+{# | date('m-d-Y H:i:s') #}
