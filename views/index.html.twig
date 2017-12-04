@@ -53,6 +53,7 @@
                             </span>
                         </div>
                     </div>
+                        <button type="submit" class="btn btn-info">Se data</button>
                     </form>
                 </div>
             </div>
@@ -61,11 +62,16 @@
 
     <script type="text/javascript">
         $(function () {
-            $('#datetimepicker1').datetimepicker();
-        });
+            $('#datetimepicker1').datetimepicker({
+            format: 'DD-MM-YYYY'
 
+            });
+        });
         $(function () {
-            $('#datetimepicker2').datetimepicker();
+            $('#datetimepicker2').datetimepicker({
+                format: 'DD-MM-YYYY'
+
+            });
         });
 
         $(function() {
