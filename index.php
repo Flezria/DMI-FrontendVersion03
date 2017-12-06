@@ -1,4 +1,8 @@
-<?php
+<?php session_start();
+
+if(isset($_SESSION['SpecificData'])) {
+    $specifictemperatures = $_SESSION['SpecificData'];
+}
 
 // include('php_helpers/getlivedata.php');
 
@@ -14,7 +18,7 @@ $twig->addExtension(new Twig_Extension_Debug());
 $template = $twig->loadTemplate('index.html.twig');
 
 //$parametersToTwig = array("liveData"=>$livetemp);
-$parametersToTwig = array();
+$parametersToTwig = array("specifictemperatures"=>$specifictemperatures);
 
 echo $template->render($parametersToTwig);
 

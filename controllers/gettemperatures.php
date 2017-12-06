@@ -1,4 +1,5 @@
 <?php
+include_once ('../php_helpers/datetimeparse.php');
 
 $uri = "http://dmiprivateservices.azurewebsites.net/DMIService.svc/temperatures";
 
@@ -6,9 +7,11 @@ $jsondata = file_get_contents($uri);
 
 $convertToAssociativeArray = true;
 
-$print="";
-
 $temperatures = json_decode($jsondata,$convertToAssociativeArray);
+
+foreach ($temperatures as &$temp) {
+    $temp['CaptureTime'] = parseUnixTimestamp($temp['CaptureTime']);
+}
 
 require_once '../vendor/autoload.php';
 
