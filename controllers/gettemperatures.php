@@ -1,5 +1,5 @@
 <?php
-include_once ('../php_helpers/datetimeparse.php');
+include_once('../php_helpers/utils.php');
 
 $uri = "http://dmiprivateservices.azurewebsites.net/DMIService.svc/temperatures";
 

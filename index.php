@@ -1,10 +1,11 @@
 <?php session_start();
+include_once ('php_helpers/utils.php');
+include_once ('php_helpers/thirdpartyapi.php');
 
 if(isset($_SESSION['SpecificData'])) {
     $specifictemperatures = $_SESSION['SpecificData'];
+    $tempavg = calcAverageTemp($specifictemperatures);
 }
-
-// include('php_helpers/getlivedata.php');
 
 require_once 'vendor/autoload.php';
 
@@ -17,8 +18,7 @@ $twig->addExtension(new Twig_Extension_Debug());
 
 $template = $twig->loadTemplate('index.html.twig');
 
-//$parametersToTwig = array("liveData"=>$livetemp);
-$parametersToTwig = array("specifictemperatures"=>$specifictemperatures);
+$parametersToTwig = array("specifictemperatures"=>$specifictemperatures, "average"=>$tempavg, "thirdpartytemp"=>$thirdpartytemp);
 
 echo $template->render($parametersToTwig);
 
